@@ -45,4 +45,6 @@ classDiagram
     Users "1" -- "N" Transfer
     Users "1" -- "1" Card
     Users "1" -- "N" News
+    Users "1" -- "N" Pix
+    Users "1" -- "N" Pay
 
