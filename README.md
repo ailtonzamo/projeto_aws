@@ -3,48 +3,37 @@ Projeto para desenvolver um projeto usando a aws
 
 ```mermaid
 classDiagram
-    class Account {
+    class User {
         +String name
-        +String accountNumber
-        +String accountAgency
-        +Float accountBalance
-        +Float accountLimit
+        +Account account
+        +Feature[] features
+        +Card card
+        +News[] news
     }
 
-    class Pix {
-        +String pixIcon
-        +String pixDescription
+    class Account {
+        +String number
+        +String agency
+        +Number balance
+        +Number limit
     }
 
-    class Pay {
-        +String payIcon
-        +String payDescription
-    }
-
-    class Transfer {
-        +String transferIcon
-        +String transferDescription
+    class Feature {
+        +String icon
+        +String description
     }
 
     class Card {
-        +String cardNumber
-        +Float cardLimit
+        +String number
+        +Number limit
     }
 
     class News {
-        +String newsIcon
-        +String newsDescription
+        +String icon
+        +String description
     }
 
-    Account --> Pix
-    Account --> Pay
-    Account --> Transfer
-    Account --> Card
-    Account --> News
-    Users "1" -- "1" Account
-    Users "1" -- "N" Transfer
-    Users "1" -- "1" Card
-    Users "1" -- "N" News
-    Users "1" -- "N" Pix
-    Users "1" -- "N" Pay
-
+    User "1" --> "1" Account
+    User "1" --> "many" Feature
+    User "1" --> "1" Card
+    User "1" --> "many" News
