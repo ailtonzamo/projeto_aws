@@ -41,3 +41,8 @@ classDiagram
     Account --> Transfer
     Account --> Card
     Account --> News
+    Users "1" -- "1" Account
+    Users "1" -- "N" Transfer
+    Users "1" -- "1" Card
+    Users "1" -- "N" News
+
