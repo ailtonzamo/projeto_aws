@@ -1,6 +1,6 @@
 Projeto para desenvolver um projeto usando a aws
 ## DIAGRAMA DE CLASSES
-''' mermaid
+--- mermaid
 class Pix {
     +String pixIcon
     +String pixDescription
