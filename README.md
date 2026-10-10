@@ -1,5 +1,5 @@
 Projeto para desenvolver um projeto usando a aws
----mermaid
+''' mermaid
 class Pix {
     +String pixIcon
     +String pixDescription
@@ -32,4 +32,4 @@ Account --> Card
 
 Account --> News
     Account --> News
----
+
